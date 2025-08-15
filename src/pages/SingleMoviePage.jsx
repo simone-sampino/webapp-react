@@ -41,6 +41,58 @@ export default function SingleMoviePage() {
               </div>
             );
           })}
+
+          <h3>Add your review:</h3>
+          <form className="card bg-light p-3">
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">
+                Name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                id="name"
+                aria-describedby="helpId"
+                placeholder="Type your name"
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="content" className="form-label">
+                Content
+              </label>
+              <textarea
+                className="form-control"
+                name="content"
+                id="content"
+                rows="3"
+                placeholder="Write here your review"
+              ></textarea>
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="vote" className="form-label">
+                Vote
+              </label>
+              <select
+                className="form-select form-select-lg"
+                name="vote"
+                id="vote"
+              >
+                <option defaultValue="0">Select your vote from 1 to 5</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <button type="submit" className="btn btn-primary">
+              Send <i className="bi bi-box-arrow-in-right"></i>
+            </button>
+          </form>
         </div>
       </section>
     </>
